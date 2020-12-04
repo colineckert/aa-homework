@@ -21,11 +21,15 @@ class Map
   end
 
   def get(key)
-    @map.each
+    @map.each { |pair| return pair.last if pair.first == key }
   end
 
   def delete(key)
-
+    @map.reject! { |pair| pair.first == key }
   end
+
+  # def show
+
+  # end
 
 end
