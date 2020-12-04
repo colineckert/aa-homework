@@ -1,19 +1,28 @@
 class Queue
 
   def initialize
-    @queue = []
+    @inner_array = []
   end
 
   def enqueue(el)
-    @queue.unshift(el)
+    inner_array.unshift(el)
+    self
   end
 
   def dequeue
-    @queue.pop
+    inner_array.pop
   end
 
   def peek
-    @queue.last
+    inner_array.last
   end
+
+  def show
+    inner_array.dup
+  end
+
+  private
+
+  attr_reader :inner_array
 
 end
