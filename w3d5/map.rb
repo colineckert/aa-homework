@@ -28,8 +28,8 @@ class Map
     @map.reject! { |pair| pair.first == key }
   end
 
-  # def show
-
-  # end
+  def show
+    p @map
+  end
 
 end
