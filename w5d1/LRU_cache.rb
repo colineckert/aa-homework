@@ -2,7 +2,7 @@ class LRUCache
     attr_reader :max_size
 
     def initialize(size)
-        @underlying_array = Array.new(size)
+        @underlying_array = []
         @max_size = size
     end
 
@@ -45,7 +45,7 @@ johnny_cache = LRUCache.new(4)
 johnny_cache.add("I walk the line")
 johnny_cache.add(5)
 
-johnny_cache.count # => returns 2
+p johnny_cache.count # => returns 2
 
 johnny_cache.add([1,2,3])
 johnny_cache.add(5)
